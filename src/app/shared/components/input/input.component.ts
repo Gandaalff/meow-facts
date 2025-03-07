@@ -1,4 +1,9 @@
-import { Component, inject, input, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  inject,
+  input,
+} from '@angular/core';
 import { ControlContainer, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
@@ -6,6 +11,7 @@ import { ControlContainer, ReactiveFormsModule } from '@angular/forms';
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class InputComponent {
   public controlContainer = inject(ControlContainer);
@@ -15,5 +21,4 @@ export class InputComponent {
   public type = input<string>('text');
   public showErrorMessage = input<boolean>(false);
   public errorMessage = input<string>();
-
 }

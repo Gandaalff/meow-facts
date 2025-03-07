@@ -9,13 +9,12 @@ import {
 } from '@angular/core';
 import { CatFactsCardComponent } from '../components/cat-facts-card/cat-facts-card.component';
 import { CatFactsService } from '../services/cat-facts.service';
-import { LoaderComponent } from '../../../shared/components/loader/loader.component';
 
 @Component({
   selector: 'app-cat-facts',
   templateUrl: './cat-facts.component.html',
   styleUrls: ['./cat-facts.component.scss'],
-  imports: [CatFactsCardComponent, LoaderComponent],
+  imports: [CatFactsCardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class CatFactsComponent implements OnInit {

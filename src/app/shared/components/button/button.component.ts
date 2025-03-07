@@ -2,7 +2,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   input,
-  OnInit,
   output,
 } from '@angular/core';
 import { BUTTON_TYPES } from '../../config/button-types.helper';

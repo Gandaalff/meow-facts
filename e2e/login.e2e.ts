@@ -24,3 +24,20 @@ test('isLoginWork', async ({ page }) => {
   expect(currentURL).toMatch(/\/app\/cat-facts$/);
 });
 
+test('submitEmptyForm', async ({ page }) => {
+  await page.goto('/login');
+  await expect(page).toHaveTitle('MeowFacts');
+  await expect(
+    page.getByRole('textbox', { name: 'Wpisz swój login' })
+  ).toBeVisible();
+  await expect(
+    page.getByRole('textbox', { name: 'Wpisz swoje hasło' })
+  ).toBeVisible();
+  await page.getByRole('button', { name: 'Zaloguj' }).click();
+  await expect(
+    page
+      .locator('form div')
+      .filter({ hasText: 'Login Pole jest wymagane' })
+      .locator('div')
+  ).toBeVisible();
+});

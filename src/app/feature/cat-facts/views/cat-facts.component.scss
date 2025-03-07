@@ -1,4 +1,5 @@
 $overlay-opacity: 0.3;
+$color-error: red;
 
 .cat-facts-page-container {
   position: relative;
@@ -23,7 +24,7 @@ $overlay-opacity: 0.3;
   }
 
   .error-message {
-    color: red;
+    color: $color-error;
   }
 
   .cat-facts-title {

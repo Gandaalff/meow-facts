@@ -7,7 +7,6 @@ import { IS_LOGGED_IN } from './global-const.helper';
   providedIn: 'root',
 })
 export class UserLoggedInGuard implements CanActivate {
-  private authService = inject(AuthService);
   private router = inject(Router);
 
   canActivate(): boolean {

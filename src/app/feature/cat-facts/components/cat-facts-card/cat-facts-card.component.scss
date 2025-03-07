@@ -1,14 +1,15 @@
 .cat-facts-card {
   min-height: 60px;
-  margin: 45px 50px;
+  margin: 10px 150px 60px 150px;
   padding: 20px;
   background: #f8f9fa;
   border: 2px solid #9eb9d4;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 4px 8px #007bff33;
   display: flex;
   align-items: center;
   justify-content: center;
+
   .cat-fact-content {
     font-size: 30px;
   }

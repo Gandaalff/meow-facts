@@ -1,12 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  input,
-  OnInit,
-  signal,
-} from '@angular/core';
-import { CatFactsService } from '../../services/cat-facts.service';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-cat-facts-card',

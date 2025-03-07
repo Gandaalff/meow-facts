@@ -1,13 +1,17 @@
-<div class="cat-facts-container">
-  @for(catFact of catFactsData(); track catFact) {
-  <app-cat-facts-card [catFact]="catFact"></app-cat-facts-card>
-  } @if(loadingData()) {
-  <div class="loading-container">Ładowanie danych...</div>
+<div class="cat-facts-page-container">
+  <h1 class="cat-facts-title">Kocie ciekawostki</h1>
+  <div class="cat-facts-container">
+    @for(catFact of catFactsData(); track catFact) {
+    <h3 class="cat-fact-card-ttile">Ciekawostka nr {{ $index + 1 }}</h3>
+    <app-cat-facts-card [catFact]="catFact"></app-cat-facts-card>
+    } @if(loadingData()) {
+    <div class="loading-container">Kocie smaczki w drodze...</div>
 
-  } @if(showErrorNotification()) {
-  <div class="error-message">
-    Wyglada na to ze przeczytałes wszystkie ciekawostki! Dołożymy wszelkich
-    starań aby w najbliszym czasie dostarczyć nowe.
+    } @if(showErrorNotification()) {
+    <div class="error-message">
+      Wyglada na to ze przeczytałes wszystkie ciekawostki! Dołożymy wszelkich
+      starań aby w najbliszym czasie dostarczyć nowe.
+    </div>
+    }
   </div>
-  }
 </div>

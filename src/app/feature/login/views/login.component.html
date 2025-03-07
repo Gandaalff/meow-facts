@@ -1,0 +1,33 @@
+<div class="page-container">
+  <div class="login-card">
+    <img class="logo" src="../../../../assets/img/logo.svg" alt="page logo" />
+    <h2>Zaloguj się!</h2>
+
+    <div class="login-form">
+      <form [formGroup]="loginForm">
+        <app-input
+          label="Login"
+          placeholder="Wpisz swój login"
+          controlName="loginName"
+          [showErrorMessage]="
+            loginForm.get('loginName')!.hasError('required') && formSubmitted()
+          "
+          errorMessage="Pole jest wymagane"
+        ></app-input>
+        <app-input
+          label="Hasło"
+          placeholder="Wpisz swoje hasło"
+          controlName="password"
+          type="password"
+          [showErrorMessage]="
+            loginForm.get('password')!.hasError('required') && formSubmitted()
+          "
+          errorMessage="Pole jest wymagane"
+        ></app-input>
+        <div class="button-container">
+          <app-button (click)="login()" buttonLabel="Zaloguj"></app-button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

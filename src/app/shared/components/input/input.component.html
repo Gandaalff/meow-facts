@@ -1,0 +1,18 @@
+<ng-container [formGroup]="$any(controlContainer.control)">
+  <div class="input-container">
+    @if(label()) {
+    <label>{{ label() }}</label>
+    }
+    <input
+      [type]="type()"
+      [placeholder]="placeholder()"
+      [formControlName]="controlName()"
+      [class.has-error]="showErrorMessage()"
+    />
+    @if(showErrorMessage()) {
+    <div class="error-message">
+      {{ errorMessage() }}
+    </div>
+    }
+  </div>
+</ng-container>

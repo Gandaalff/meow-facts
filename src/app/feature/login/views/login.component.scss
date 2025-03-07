@@ -1,0 +1,49 @@
+$bg-color: #b3cde6;
+$overlay-opacity: 0.5;
+$card-width: 320px;
+$card-padding: 20px;
+$card-radius: 10px;
+$box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+.page-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../../../../assets/img/cat-background.jpg") no-repeat
+      center;
+    background-size: cover;
+    opacity: $overlay-opacity;
+    z-index: -1;
+  }
+
+  .login-card {
+    background-color: $bg-color;
+    border-radius: $card-radius;
+    padding: $card-padding;
+    width: $card-width;
+    box-shadow: $box-shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .button-container {
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

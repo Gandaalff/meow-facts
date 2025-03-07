@@ -1,0 +1,13 @@
+<div class="cat-facts-container">
+  @for(catFact of catFactsData(); track catFact) {
+  <app-cat-facts-card [catFact]="catFact"></app-cat-facts-card>
+  } @if(loadingData()) {
+  <div class="loading-container">Ładowanie danych...</div>
+
+  } @if(showErrorNotification()) {
+  <div class="error-message">
+    Wyglada na to ze przeczytałes wszystkie ciekawostki! Dołożymy wszelkich
+    starań aby w najbliszym czasie dostarczyć nowe.
+  </div>
+  }
+</div>

@@ -1,0 +1,12 @@
+<button
+class="action-button"
+  type="button"
+  (click)="click.emit()"
+  [ngClass]="
+    buttonType() === buttonTypes.PRIMARY
+      ? buttonTypes.PRIMARY
+      : buttonTypes.WARN
+  "
+>
+  {{ buttonLabel() }}
+</button>

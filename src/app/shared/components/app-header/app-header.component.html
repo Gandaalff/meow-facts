@@ -1,0 +1,19 @@
+<div class="header-bar">
+  <div>
+    <img class="logo" src="../../../../assets/img/logo.svg" alt="page logo" />
+  </div>
+
+  <div class="user-info">
+    <span class="user-name">{{
+      userDataService.userData()?.name +
+        " " +
+        userDataService.userData()?.lastName
+    }}</span>
+
+    <app-button
+      (click)="logout()"
+      buttonLabel="Wyloguj"
+      [buttonType]="buttonTypes.WARN"
+    ></app-button>
+  </div>
+</div>

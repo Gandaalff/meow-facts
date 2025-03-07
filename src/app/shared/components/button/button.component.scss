@@ -1,0 +1,44 @@
+@use "sass:color";
+
+.action-button {
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.75rem 1.5rem;
+  font-size: 16px;
+  margin: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  &.primary {
+    background-color: #6485a6;
+    &:hover {
+      background-color: color.adjust(#6485a6, $lightness: 10%);
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+
+    &:active {
+      background-color: color.adjust(#6485a6, $lightness: 15%);
+    }
+  }
+  &.warn {
+    background-color: #ff4d4f;
+    &:hover {
+      background-color: color.adjust(#ff4d4f, $lightness: 10%);
+      box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+
+    &:active {
+      background-color: color.adjust(#ff4d4f, $lightness: 15%);
+    }
+  }
+}

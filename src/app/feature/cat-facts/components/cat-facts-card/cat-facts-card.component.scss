@@ -1,11 +1,15 @@
+$color-background: #f8f9fa;
+$color-border: #9eb9d4;
+$color-box-shadow: #007bff33;
+
 .cat-facts-card {
   min-height: 60px;
   margin: 10px 150px 60px 150px;
   padding: 20px;
-  background: #f8f9fa;
-  border: 2px solid #9eb9d4;
+  background: $color-background;
+  border: 2px solid $color-border;
   border-radius: 10px;
-  box-shadow: 0 4px 8px #007bff33;
+  box-shadow: 0 4px 8px $color-box-shadow;
   display: flex;
   align-items: center;
   justify-content: center;

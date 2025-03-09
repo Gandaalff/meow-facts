@@ -1,5 +1,6 @@
 $color-header-background: #f8f9fa;
 $color-header-vorder: #6485a6;
+$mobile-width: 500px;
 
 .header-bar {
   display: flex;
@@ -20,6 +21,22 @@ $color-header-vorder: #6485a6;
 
     .user-name {
       font-weight: bold;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header-bar {
+    padding: 0 8px;
+    .user-info {
+      display: flex;
+      align-items: center;
+      margin-right: 0;
+
+      .user-name {
+        font-size: 15px;
+        text-align: right;
+      }
     }
   }
 }

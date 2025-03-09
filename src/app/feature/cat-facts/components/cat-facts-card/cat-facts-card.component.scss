@@ -1,6 +1,7 @@
 $color-background: #f8f9fa;
 $color-border: #9eb9d4;
 $color-box-shadow: #007bff33;
+$mobile-width: 500px;
 
 .cat-facts-card {
   min-height: 60px;
@@ -16,5 +17,16 @@ $color-box-shadow: #007bff33;
 
   .cat-fact-content {
     font-size: 30px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .cat-facts-card {
+    min-height: 60px;
+    margin: 10px 20px 40px 20px;
+    font-size: 15px;
+    .cat-fact-content {
+      font-size: 15px;
+    }
   }
 }
